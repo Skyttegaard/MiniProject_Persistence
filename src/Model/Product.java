@@ -9,6 +9,7 @@ public class Product {
 	private String countryOfOrigin;
 	private int minStock;
 	private String productType;
+	private Supplier supplier;
 	
 	public Product(int productId, String name, int purchasePrice, int salesPrice, int rentPrice, String countryOfOrigin,
 			int minStock, String productType) {
@@ -88,11 +89,11 @@ public class Product {
 	}
 	
 	public void setSupplier(Supplier supplier) {
-		//TODO
+		this.supplier = supplier;
 	}
 	
 	public Supplier getSupplier() {
-		//TODO
-		return null;
+		
+		return supplier;
 	}
 }

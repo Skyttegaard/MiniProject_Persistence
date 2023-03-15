@@ -1,6 +1,7 @@
 package Model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SalesOrder {
@@ -72,12 +73,12 @@ public class SalesOrder {
 	}
 	
 	public void addOrderLine(OrderLine orderLine) {
-		//TODO
+		orderLines.add(orderLine);
 	}
 	
 	public List<OrderLine> getOrderLines(){
-		//TODO
-		return null;
+		
+		return new ArrayList<>(orderLines);
 	}
 
 }

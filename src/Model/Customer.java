@@ -8,9 +8,18 @@ public class Customer {
 	private String zipcode;
 	private String city;
 	private String phone;
+	
+	public Customer(String name, String email, String address, String zipcode, String city,
+			String phone) {
+		this.name = name;
+		this.email = email;
+		this.address = address;
+		this.zipcode = zipcode;
+		this.city = city;
+		this.phone = phone;
+	}
 	public Customer(int customerId, String name, String email, String address, String zipcode, String city,
 			String phone) {
-		super();
 		this.customerId = customerId;
 		this.name = name;
 		this.email = email;

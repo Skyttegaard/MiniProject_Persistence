@@ -19,4 +19,9 @@ public class CustomerDB implements CustomerDBIF{
 		return null;
 	}
 	
+	public Customer addCustomer(Customer customer) {
+		//TODO
+		return null;
+	}
+	
 }

@@ -10,5 +10,9 @@ public class CustomerController implements CustomerControllerIF {
 		// TODO
 		return null;
 	}
+	public Customer addCustomer(Customer customer) {
+		// TODO
+		return null;
+	}
 
 }
