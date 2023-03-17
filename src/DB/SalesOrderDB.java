@@ -29,15 +29,15 @@ public class SalesOrderDB implements SalesOrderDBIF{
 			addOrder.setInt(6, newOrder.getCustomerId());
 			addOrder.executeUpdate();
 			ResultSet rs = addOrder.getGeneratedKeys();
-			if(rs.next()) {
+			while(rs.next()) {
 				addOrderLine = DBConnection.getInstance().getDBCon().prepareStatement(addOrderLineStmt);
 				for(OrderLine ol: newOrder.getOrderLines()) {
 					addOrderLine.setInt(1, ol.getOrderAmount());
 					addOrderLine.setInt(2,ol.getProductPrice());
 					addOrderLine.setInt(3, ol.getProduct().getProductId());
 					addOrderLine.setInt(4, rs.getInt(1));
+					addOrderLine.executeUpdate();
 				}
-				addOrderLine.executeUpdate();
 			}
 			
 		} catch(SQLException e) {
