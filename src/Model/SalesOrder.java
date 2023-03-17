@@ -2,26 +2,29 @@ package Model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SalesOrder {
 	private int orderNo;
-	private LocalDate date;
+	private Date date;
 	private String deliveryStatus;
-	private LocalDate deliveryDate;
+	private Date deliveryDate;
 	private int totalPrice;
-	private LocalDate paymentDate;
+	private Date paymentDate;
+	private int customerId;
+
 	private List<OrderLine> orderLines;
 	
-	public SalesOrder(int orderNo, LocalDate date, String deliveryStatus, LocalDate deliveryDate, int totalPrice,
-			LocalDate paymentDate) {
+	public SalesOrder(Date date, String deliveryStatus, Date deliveryDate, int totalPrice,
+			Date paymentDate) {
 		super();
-		this.orderNo = orderNo;
 		this.date = date;
 		this.deliveryStatus = deliveryStatus;
 		this.deliveryDate = deliveryDate;
 		this.totalPrice = totalPrice;
 		this.paymentDate = paymentDate;
+		orderLines = new ArrayList();
 	}
 
 	public int getOrderNo() {
@@ -32,11 +35,11 @@ public class SalesOrder {
 		this.orderNo = orderNo;
 	}
 
-	public LocalDate getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDate date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
@@ -48,11 +51,11 @@ public class SalesOrder {
 		this.deliveryStatus = deliveryStatus;
 	}
 
-	public LocalDate getDeliveryDate() {
+	public Date getDeliveryDate() {
 		return deliveryDate;
 	}
 
-	public void setDeliveryDate(LocalDate deliveryDate) {
+	public void setDeliveryDate(Date deliveryDate) {
 		this.deliveryDate = deliveryDate;
 	}
 
@@ -64,11 +67,11 @@ public class SalesOrder {
 		this.totalPrice = totalPrice;
 	}
 
-	public LocalDate getPaymentDate() {
+	public Date getPaymentDate() {
 		return paymentDate;
 	}
 
-	public void setPaymentDate(LocalDate paymentDate) {
+	public void setPaymentDate(Date paymentDate) {
 		this.paymentDate = paymentDate;
 	}
 	
@@ -81,4 +84,11 @@ public class SalesOrder {
 		return new ArrayList<>(orderLines);
 	}
 
+	public int getCustomerId() {
+		return customerId;
+	}
+	
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 }

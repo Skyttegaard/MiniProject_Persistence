@@ -8,8 +8,8 @@ public class ProductController implements ProductControllerIF{
 	private ProductDBIF productDB;
 	
 	public Product findProduct(String name) {
-		// TODO
-		return null;
+		
+		return productDB.findProduct(name);
 	}
 
 }
