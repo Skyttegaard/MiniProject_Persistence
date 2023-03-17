@@ -4,7 +4,11 @@ public class OrderLine {
 	private int orderAmount;
 	private int productPrice;
 	private Product product;
-	
+	public OrderLine(int amount, int price, Product product) {
+		this.orderAmount = amount;
+		this.productPrice = price;
+		this.product = product;
+	}
 	public int getOrderAmount() {
 		return orderAmount;
 	}

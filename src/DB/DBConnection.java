@@ -6,13 +6,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-	//private static final String serverAddress = "jdbc:sqlserver://hildur.ucn.dk";
-	private static final String serverAddress = "jdbc:sqlserver://localhost:1433";
+	private static final String serverAddress = "jdbc:sqlserver://hildur.ucn.dk";
+	//private static final String serverAddress = "jdbc:sqlserver://localhost:1433";
 	private static final String databaseName = ";databaseName=DMA-CSD-S223_10461236";
-	//private static String userName = ";user=DMA-CSD-S223_10461236";
-	private static String userName = ";user=sa";
-	//private static String password = ";password=Password1!";
-	private static String password = ";password=secret2023";
+	private static String userName = ";user=DMA-CSD-S223_10461236";
+	//private static String userName = ";user=sa";
+	private static String password = ";password=Password1!";
+	//private static String password = ";password=secret2023";
     
     private static String encryption = ";encrypt=false";
 	private static Connection con;

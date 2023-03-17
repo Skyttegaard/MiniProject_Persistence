@@ -13,9 +13,12 @@ public class SalesOrder {
 	private int totalPrice;
 	private Date paymentDate;
 	private int customerId;
-
+	
 	private List<OrderLine> orderLines;
 	
+	public SalesOrder() {
+		orderLines = new ArrayList();
+	}
 	public SalesOrder(Date date, String deliveryStatus, Date deliveryDate, int totalPrice,
 			Date paymentDate) {
 		super();

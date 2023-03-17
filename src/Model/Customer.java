@@ -71,6 +71,10 @@ public class Customer {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	@Override
+    public String toString() {
+        return "Customer [Id=" + customerId + ", Name=" + name + ", Email=" + email + ", Address=" + address + ", Zipcode=" + zipcode + ", City=" + city + ", Phone=" + phone +"]";
+    }
 	
 	
 }
